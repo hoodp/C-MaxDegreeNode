@@ -3,36 +3,42 @@
 int main(int argc, char *argv[])
 {
 
-  // stores the maximum degree value
+  // Stores the maximum degree value.
   int max = 0;
 
-  // get the size of the matrix 
+  // Get the size of the matrix.
   int nodes;
   scanf("%d", &nodes);
-  printf("Size: %d\n", nodes);
 
-  // starting looping through each row
+  // Starting looping through each row.
   int i, j;
   for (i = 0; i < nodes; i++) {
-    printf("%d: ", i);
+
+    // Stores the number of edges for the current node. 
     int edges = 0;
-    // start looping through each column
+
+    // Start looping through each column.
     for (j = 0; j < nodes; j++) {
+
+      // Get the value from the matrix.
       int value;
       scanf("%d", &value);
-      printf("%d ", value);
+      
+      // Check if edge is on the same node, and that an edge exists. 
       if (i != j && value == 1) {
-	edges++;
-	/*int value;
-	scanf("%d", &value);
-	printf("%d ", value);*/
 	
+	// Increment the number of edges.
+	edges += 1;
       }
     }
+
+    // Update the max if the number of edges for this node is greater 
+    // than the current value.
     if (edges > max) 
       max = edges;
-    printf(": %d\n", max);
   }
-  printf("Max: %d\n", max);
+  
+  // Print the number of nodes, and the maximum degree. 
+  printf("%d\n%d\n", nodes, max);
   return 0;
 }
