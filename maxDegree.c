@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
       max = edges;
   }
   
-  // Print the number of nodes, and the maximum degree. 
-  printf("%d\n%d\n", nodes, max);
+  // Print the maximum degree. 
+  printf("%d\n", max);
   return 0;
 }
