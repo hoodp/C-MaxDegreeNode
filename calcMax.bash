@@ -33,4 +33,7 @@ for i in "${!degrees[@]}"; do
     printf "%d %d\n" $i ${degrees[$i]} >> results
 done
 
+# Create graph of the results using gnuplot. 
+gnuplot maxDegree.gnuplot
+
 
